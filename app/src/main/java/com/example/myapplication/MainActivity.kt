@@ -17,7 +17,8 @@ class MainActivity : AppCompatActivity() {
 
         binding.passwordValueTextView.text = Password().generatePass(8)
 
-        binding.passwordLengthSeekBar.setOnSeekBarChangeListener(object: SeekBar.OnSeekBarChangeListener {
+        binding.passwordLengthSeekBar.setOnSeekBarChangeListener(object :
+            SeekBar.OnSeekBarChangeListener {
             override fun onProgressChanged(p0: SeekBar?, p1: Int, p2: Boolean) {
                 val lengthOfPass = binding.passwordLengthSeekBar.progress
                 binding.passwordLengthValueTextView.text = lengthOfPass.toString()

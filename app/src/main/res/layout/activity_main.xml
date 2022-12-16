@@ -23,13 +23,13 @@
         android:id="@+id/passwordLengthTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:paddingStart="0dp"
+        android:paddingEnd="10dp"
         android:text="@string/enter_pass_length"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="@+id/app_name"
         app:layout_constraintTop_toBottomOf="@+id/app_name"
-        app:layout_constraintVertical_bias="0.051"
-        android:paddingStart="0dp"
-        android:paddingEnd="10dp"/>
+        app:layout_constraintVertical_bias="0.051" />
 
     <TextView
         android:id="@+id/passwordLengthValueTextView"
@@ -39,40 +39,40 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toEndOf="@id/passwordLengthTextView"
         app:layout_constraintTop_toBottomOf="@id/app_name"
-        app:layout_constraintVertical_bias="0.051"/>
+        app:layout_constraintVertical_bias="0.051" />
 
     <SeekBar
         android:id="@+id/passwordLengthSeekBar"
         android:layout_width="262dp"
         android:layout_height="36dp"
-        android:min="4"
         android:max="16"
+        android:min="4"
         android:progress="8"
         android:progressBackgroundTint="@color/lightOrange"
         android:progressTint="@color/orange"
         android:thumb="@drawable/thumb"
+        app:layout_constraintEnd_toEndOf="@id/passwordLengthTextView"
         app:layout_constraintStart_toStartOf="@+id/passwordLengthTextView"
-        app:layout_constraintTop_toBottomOf="@+id/passwordLengthTextView"
-        app:layout_constraintEnd_toEndOf="@id/passwordLengthTextView"/>
+        app:layout_constraintTop_toBottomOf="@+id/passwordLengthTextView" />
 
     <TextView
         android:id="@+id/passwordTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/password"
-        app:layout_constraintTop_toBottomOf="@id/passwordLengthSeekBar"
-        app:layout_constraintStart_toStartOf="parent"
         android:paddingStart="20dp"
-        android:paddingEnd="0dp"/>
+        android:paddingEnd="0dp"
+        android:text="@string/password"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/passwordLengthSeekBar" />
 
     <TextView
         android:id="@+id/passwordValueTextView"
-        android:textColor="@color/yellow"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintStart_toStartOf="@id/passwordTextView"
-        app:layout_constraintTop_toBottomOf="@id/passwordTextView"
         android:paddingStart="20dp"
-        android:paddingEnd="0dp"/>
+        android:paddingEnd="0dp"
+        android:textColor="@color/yellow"
+        app:layout_constraintStart_toStartOf="@id/passwordTextView"
+        app:layout_constraintTop_toBottomOf="@id/passwordTextView" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
