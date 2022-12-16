@@ -1,5 +1,6 @@
 <resources>
     <style name="MyApp" parent="Theme.Material3.Light.NoActionBar">
+        <item name="colorPrimaryDark">@color/orange</item>
         <item name="android:textColor">@color/orange</item>
         <item name="android:fontFamily">@font/doloman_pavljenko</item>
         <item name="android:windowBackground">@color/primaryDark</item>
