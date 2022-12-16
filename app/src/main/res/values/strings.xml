@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">My Application</string>
+    <string name="enter_pass_length">Enter pass length</string>
+    <string name="App_name">Pass Generator</string>
+</resources>
