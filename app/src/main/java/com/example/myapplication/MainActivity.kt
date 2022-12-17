@@ -15,19 +15,36 @@ class MainActivity : AppCompatActivity() {
         val view = binding.root
         setContentView(view)
 
-        binding.passwordValueTextView.text = Password().generatePass(8)
+        binding.passwordValueTextView.text = Password().generatePass()
 
-        binding.passwordLengthSeekBar.setOnSeekBarChangeListener(object :
-            SeekBar.OnSeekBarChangeListener {
-            override fun onProgressChanged(p0: SeekBar?, p1: Int, p2: Boolean) {
-                val lengthOfPass = binding.passwordLengthSeekBar.progress
-                binding.passwordLengthValueTextView.text = lengthOfPass.toString()
-                binding.passwordValueTextView.text = Password().generatePass(lengthOfPass)
+        binding.passwordLengthSeekBar.setOnSeekBarChangeListener(
+            object : SeekBar.OnSeekBarChangeListener {
+                override fun onProgressChanged(p0: SeekBar?, p1: Int, p2: Boolean) {
+                    val lengthOfPass = binding.passwordLengthSeekBar.progress
+                    binding.passwordLengthValueTextView.text = lengthOfPass.toString()
+                    changePasswordText(lengthOfPass)
+                }
+
+                override fun onStartTrackingTouch(p0: SeekBar?) {}
+
+                override fun onStopTrackingTouch(p0: SeekBar?) {}
             }
+        )
 
-            override fun onStartTrackingTouch(p0: SeekBar?) {}
+        binding.specialSymbolsCheckBox.setOnCheckedChangeListener { _, isChecked ->
+            changePasswordText(isChecked = isChecked)
+        }
+    }
 
-            override fun onStopTrackingTouch(p0: SeekBar?) {}
-        })
+    private fun changePasswordText(
+        passLength: Int = binding.passwordLengthSeekBar.progress,
+        isChecked: Boolean = binding.specialSymbolsCheckBox.isChecked
+    ) {
+        if (isChecked)
+            binding.passwordValueTextView.text =
+                Password().generatePassWithSpecialSymbols(passLength)
+        else
+            binding.passwordValueTextView.text =
+                Password().generatePass(passLength)
     }
 }

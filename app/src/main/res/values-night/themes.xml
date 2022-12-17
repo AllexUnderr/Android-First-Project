@@ -1,8 +1,0 @@
-<resources>
-    <style name="myApp" parent="Theme.Material3.Dark.NoActionBar">
-        <item name="android:textColor">@color/orange</item>
-        <item name="android:fontFamily">@font/doloman_pavljenko</item>
-        <item name="android:windowBackground">@color/primaryDark</item>
-        <item name="android:textSize">28sp</item>
-    </style>
-</resources>

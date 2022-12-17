@@ -23,8 +23,8 @@
         android:id="@+id/passwordLengthTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:paddingStart="0dp"
-        android:paddingEnd="10dp"
+        android:layout_marginStart="0dp"
+        android:layout_marginEnd="10dp"
         android:text="@string/enter_pass_length"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="@+id/app_name"
@@ -59,8 +59,8 @@
         android:id="@+id/passwordTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:paddingStart="20dp"
-        android:paddingEnd="0dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
         android:text="@string/password"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/passwordLengthSeekBar" />
@@ -69,10 +69,17 @@
         android:id="@+id/passwordValueTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:paddingStart="20dp"
-        android:paddingEnd="0dp"
         android:textColor="@color/yellow"
         app:layout_constraintStart_toStartOf="@id/passwordTextView"
         app:layout_constraintTop_toBottomOf="@id/passwordTextView" />
+
+    <CheckBox
+        android:textColor="@color/orange"
+        android:id="@+id/specialSymbolsCheckBox"
+        android:text="@string/specialSymbolsTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/passwordValueTextView"
+        app:layout_constraintTop_toBottomOf="@id/passwordValueTextView" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

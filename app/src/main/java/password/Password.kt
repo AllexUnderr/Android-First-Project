@@ -1,13 +1,14 @@
 package password
 
-import kotlin.random.Random
-import kotlin.random.nextInt
-
-class Password() {
+class Password {
     private val charPool: List<Char> = ('a'..'z') + ('A'..'Z') + ('0'..'9')
+    private val charPoolWithSymbols: List<Char> = charPool + ('!'..'*')
 
-    fun generatePass(passLength: Int) =
+    fun generatePass(passLength: Int = 8) =
         (1..passLength)
-            .map { charPool[Random.nextInt(charPool.indices)] }
-            .joinToString("")
+            .joinToString(separator = "") { charPool.random().toString() }
+
+    fun generatePassWithSpecialSymbols(passLength: Int = 8) =
+        (1..passLength)
+            .joinToString(separator = "") { charPoolWithSymbols.random().toString() }
 }
