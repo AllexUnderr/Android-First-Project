@@ -1,1 +1,1 @@
-# ПИПИСЬКА
+# Pass generator first android project
