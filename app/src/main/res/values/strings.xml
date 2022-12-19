@@ -3,4 +3,5 @@
     <string name="enter_pass_length">Enter pass length: </string>
     <string name="seekbar_progress">8</string>
     <string name="password">Password:</string>
+    <string name="specialSymbolsTextView">Use special symbols?</string>
 </resources>
